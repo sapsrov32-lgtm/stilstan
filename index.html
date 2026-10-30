@@ -1,2134 +1,764 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Стильстан | Барбершоп в Бишкеке</title>
-  <meta name="description" content="Премиальный барбершоп «Стильстан» в Бишкеке. Мужские и детские стрижки, моделирование бороды, уход за лицом. Ул. Урмат, 16. Ежедневно 10:00–23:00.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>СТИЛЬСТАН (STIL.STAN) — Барбершоп в Бишкеке | Кочкор-Ата, 446</title>
+  <meta
+    name="description"
+    content="Барбершоп СТИЛЬСТАН (STIL.STAN) в Бишкеке, ул. Кочкор-Ата, 446. Мужские и детские стрижки, моделирование и королевское бритьё бороды, чистка лица. Ежедневно с 10:00 до 23:00. Быстрая запись в WhatsApp."
+  />
+  <meta name="theme-color" content="#080808" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_KG" />
+  <meta property="og:title" content="СТИЛЬСТАН (STIL.STAN) — Барбершоп в Бишкеке" />
+  <meta
+    property="og:description"
+    content="Стиль. Качество. Уверенность. Прайс-лист и быстрая запись в WhatsApp. Бишкек, ул. Кочкор-Ата, 446 (10:00–23:00)."
+  />
+
+  <!-- Встроенный векторный Favicon STIL.STAN -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='58' fill='%23050505' stroke='%23D6B15E' stroke-width='4'/%3E%3Cpath d='M39 39H81L82.5 47H78.5C77.5 43.2 75.2 42 70 42H64V73C64 76.8 65.4 77.8 69.5 78.2V81H50.5V78.2C54.6 77.8 56 76.8 56 73V42H50C44.8 42 42.5 43.2 41.5 47H37.5L39 39Z' fill='%23D6B15E'/%3E%3Cpath d='M72.5 28.5C68.5 28.5 67.2 29.8 66.2 29.8C64.8 29.8 61.5 27.5 55.5 27.5C46.2 27.5 40.5 33.2 40.5 40.5C40.5 48.2 47.2 51.8 56.5 55.2C64.2 58 68.5 60.4 68.5 65.8C68.5 70.8 64.2 74.2 57.5 74.2C49.5 74.2 44.5 69.2 42.8 61.5H39.5L40.8 75.5C44.2 75.5 45.5 74.4 46.8 74.4C48.2 74.4 52.2 76.8 58.2 76.8C68.8 76.8 75.5 70.8 75.5 62.8C75.5 54.8 69.2 50.8 59.5 47.2C51.5 44.2 47.2 41.8 47.2 36.8C47.2 32.5 51 29.8 56.8 29.8C63.8 29.8 68.2 33.8 69.8 40.2H73L72.5 28.5Z' fill='%23F5F5F5'/%3E%3C/svg%3E"
+  />
+
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgPrimary: '#080808',
+            bgSurface1: '#111111',
+            bgSurface2: '#181818',
+            goldPrimary: '#D6B15E',
+            goldLight: '#F0D58A',
+            textPrimary: '#F5F5F5',
+            textSecondary: '#A7A7A7',
+            borderSubtle: '#35302A',
+          },
+          fontFamily: {
+            sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Иконки Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Структурированные данные Schema.org (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarberShop",
+      "name": "СТИЛЬСТАН (STIL.STAN Barber Shop)",
+      "alternateName": "STIL.STAN",
+      "slogan": "Стиль. Качество. Уверенность",
+      "telephone": "+996705050647",
+      "priceRange": "150-600 KGS",
+      "currenciesAccepted": "KGS",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Кочкор-Ата, 446",
+        "addressLocality": "Бишкек",
+        "addressCountry": "KG"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "23:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/stil.stan/"
+      ]
+    }
+  </script>
+
   <style>
-    /* ==========================================================================
-       1. СБРОС СТИЛЕЙ И ПЕРЕМЕННЫЕ (CSS VARIABLES)
-       ========================================================================== */
-    :root {
-      --bg-main: #0a0a0c;
-      --bg-card: #121318;
-      --bg-card-hover: #181922;
-      --bg-elevated: #1a1c24;
-      --text-main: #f5f5f7;
-      --text-muted: #9ba1ad;
-      --text-dim: #656a76;
-      --gold-primary: #d4af37;
-      --gold-light: #f5df88;
-      --gold-dark: #9e7b16;
-      --gold-gradient: linear-gradient(135deg, #fae292 0%, #d4af37 50%, #9e7b16 100%);
-      --gold-border: rgba(212, 175, 55, 0.22);
-      --gold-border-strong: rgba(212, 175, 55, 0.55);
-      --gold-glow: 0 0 25px rgba(212, 175, 55, 0.15);
-      --wa-color: #25D366;
-      --status-open: #22c55e;
-      --status-warning: #f59e0b;
-      --status-closed: #ef4444;
-      --font-serif: "Georgia", "Times New Roman", serif;
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --container-width: 1040px;
-      --header-height: 68px;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      background-color: var(--bg-main);
-      color: var(--text-main);
-      font-family: var(--font-sans);
-      font-size: 16px;
-      line-height: 1.5;
-      -webkit-text-size-adjust: 100%;
-    }
-
     body {
-      background-color: var(--bg-main);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      position: relative;
+      background-color: #080808;
+      color: #F5F5F5;
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
       overflow-x: hidden;
-      /* Отступ снизу, чтобы плавающая кнопка справа не перекрывала контент */
-      padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px));
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: -150px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 450px;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
+    .font-luxury-serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    .container {
-      width: 100%;
-      max-width: var(--container-width);
-      margin: 0 auto;
-      padding: 0 18px;
-      position: relative;
-      z-index: 1;
-    }
-
-    section {
-      padding: 56px 0;
-      position: relative;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 34px;
-    }
-
-    .section-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--gold-light);
-      background: rgba(212, 175, 55, 0.08);
-      border: 1px solid var(--gold-border);
-      padding: 4px 14px;
-      border-radius: 50px;
-      margin-bottom: 12px;
-      font-weight: 600;
-    }
-
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: 1.85rem;
-      line-height: 1.25;
-      color: #fff;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    .section-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-top: 8px;
-      max-width: 580px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* ==========================================================================
-       ПЛАШКА СТАТУСА РАБОТЫ (ОТКРЫТО / СКОРО ЗАКРЫТИЕ / ЗАКРЫТО)
-       ========================================================================== */
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 5px 14px;
-      border-radius: 40px;
-      background: rgba(18, 19, 24, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-      letter-spacing: 0.02em;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      position: relative;
-    }
-
-    .status-dot::after {
-      content: "";
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      border-radius: 50%;
-      background: inherit;
-      opacity: 0.45;
-      animation: pulseDot 2s ease-out infinite;
-    }
-
-    @keyframes pulseDot {
-      0% { transform: scale(1); opacity: 0.6; }
-      100% { transform: scale(2.2); opacity: 0; }
-    }
-
-    .status-badge.status-open {
-      color: #86efac;
-      border-color: rgba(34, 197, 94, 0.35);
-      background: rgba(34, 197, 94, 0.1);
-    }
-    .status-badge.status-open .status-dot {
-      background-color: var(--status-open);
-    }
-
-    .status-badge.status-warning {
-      color: #fde047;
-      border-color: rgba(245, 158, 11, 0.35);
-      background: rgba(245, 158, 11, 0.12);
-    }
-    .status-badge.status-warning .status-dot {
-      background-color: var(--status-warning);
-    }
-
-    .status-badge.status-closed {
-      color: #fca5a5;
-      border-color: rgba(239, 68, 68, 0.35);
-      background: rgba(239, 68, 68, 0.1);
-    }
-    .status-badge.status-closed .status-dot {
-      background-color: var(--status-closed);
-    }
-
-    /* ==========================================================================
-       2. ШАПКА / ЛИПКОЕ ВЕРХНЕЕ МЕНЮ
-       ========================================================================== */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      height: var(--header-height);
-      background: rgba(10, 10, 12, 0.9);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .brand-link {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1px;
-    }
-
-    .brand-crown-mini {
-      display: flex;
-      align-items: center;
-      color: var(--gold-primary);
-      margin-bottom: -2px;
-    }
-
-    .brand-text {
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      line-height: 1;
-    }
-
-    .brand-text .part-white {
-      color: #ffffff;
-    }
-
-    .brand-text .part-gold {
-      background: var(--gold-gradient);
+    .gold-text-gradient {
+      background: linear-gradient(135deg, #F0D58A 0%, #D6B15E 50%, #B38B36 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      display: inline-block;
     }
 
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .nav-links {
-      display: none;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .nav-link {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 6px 4px;
-    }
-
-    .nav-link:hover {
-      color: #ffffff;
-    }
-
-    .lang-switcher {
-      display: inline-flex;
-      align-items: center;
-      background: var(--bg-card);
-      border: 1px solid var(--gold-border);
-      border-radius: 40px;
-      padding: 2px;
-      user-select: none;
-    }
-
-    .lang-btn {
-      padding: 5px 11px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      border-radius: 30px;
-      color: var(--text-muted);
-      transition: all 0.25s ease;
-    }
-
-    .lang-btn.active {
-      background: var(--gold-gradient);
-      color: #0d0e11;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-
-    /* ==========================================================================
-       3. HERO СЕКЦИЯ
-       ========================================================================== */
-    .hero-section {
-      padding: 40px 0 32px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-
-    .crown-wrapper {
-      margin-bottom: 8px;
-      display: inline-flex;
-      justify-content: center;
-      filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4));
-      animation: floatSubtle 4s ease-in-out infinite;
-    }
-
-    @keyframes floatSubtle {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
-    }
-
-    .hero-title {
-      font-family: var(--font-serif);
-      font-size: 2.8rem;
-      font-weight: 900;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-
-    .hero-title .part-white {
-      color: #ffffff;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-
-    .hero-title .part-gold {
-      background: var(--gold-gradient);
+    .silver-text-gradient {
+      background: linear-gradient(180deg, #FFFFFF 0%, #E2E2E2 65%, #A5A5A5 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      display: inline-block;
     }
 
-    .hero-slogan {
-      font-size: 0.95rem;
-      color: var(--gold-light);
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 14px;
+    .gold-button-gradient {
+      background: linear-gradient(135deg, #F0D58A 0%, #D6B15E 55%, #C49B45 100%);
     }
-
-    .hero-status-container {
-      margin-bottom: 16px;
-    }
-
-    .hero-description {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 520px;
-      margin: 0 auto 26px;
-      line-height: 1.55;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 14px 26px;
-      border-radius: var(--radius-md);
-      transition: all 0.25s ease;
-      text-align: center;
-      line-height: 1.2;
-    }
-
-    .btn-wa-hero {
-      background: var(--wa-color);
-      color: #0b0c10;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
-      border-radius: 9999px;
-      font-weight: 800;
-    }
-
-    .btn-wa-hero:hover {
-      background: #28e06e;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 26px rgba(37, 211, 102, 0.5);
-    }
-
-    .btn-icon {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-    }
-
-    /* ==========================================================================
-       4. ТРИ КАРТОЧКИ БЫСТРЫХ ФАКТОВ
-       ========================================================================== */
-    .stats-section {
-      padding: 10px 0 36px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .stat-card {
-      background: var(--bg-card);
-      border: 1px solid var(--gold-border);
-      border-radius: var(--radius-md);
-      padding: 18px 16px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stat-card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--gold-gradient);
-      opacity: 0.6;
-    }
-
-    .stat-value {
-      font-family: var(--font-serif);
-      font-size: 1.85rem;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.1;
-      margin-bottom: 4px;
-    }
-
-    .stat-value.gold {
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 500;
-    }
-
-    /* ==========================================================================
-       5. ИНТЕРАКТИВНЫЙ ПРАЙС-ЛИСТ С ВЫБОРОМ УСЛУГ
-       ========================================================================== */
-    .prices-section {
-      background: linear-gradient(180deg, transparent 0%, rgba(18, 19, 24, 0.45) 50%, transparent 100%);
-    }
-
-    .price-selection-bar {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.82rem;
-      color: var(--gold-light);
-      background: rgba(212, 175, 55, 0.08);
-      border: 1px dashed var(--gold-border);
-      padding: 6px 14px;
-      border-radius: 20px;
-      margin-top: 10px;
-    }
-
-    .btn-clear-inline {
-      color: #ef4444;
-      font-weight: 600;
-      text-decoration: underline;
-      cursor: pointer;
-      display: none;
-    }
-
-    .btn-clear-inline.visible {
-      display: inline;
-    }
-
-    .price-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    .price-card {
-      background: var(--bg-card);
-      border: 1px solid var(--gold-border);
-      border-radius: var(--radius-lg);
-      padding: 24px 20px;
-      display: flex;
-      flex-direction: column;
-      transition: border-color 0.25s ease;
-    }
-
-    .price-card-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    }
-
-    .price-card-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: rgba(212, 175, 55, 0.12);
-      border: 1px solid var(--gold-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-primary);
-      flex-shrink: 0;
-    }
-
-    .price-card-title {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 0.02em;
-    }
-
-    .price-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .price-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      font-size: 0.95rem;
-      padding: 10px 12px;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      background: rgba(255, 255, 255, 0.015);
-      cursor: pointer;
-      user-select: none;
-      transition: all 0.2s ease;
-    }
-
-    .price-item:hover {
-      background: rgba(212, 175, 55, 0.05);
-      border-color: rgba(212, 175, 55, 0.25);
-    }
-
-    .price-item.selected {
-      border-color: var(--gold-primary);
-      background: rgba(212, 175, 55, 0.12);
-      box-shadow: 0 0 16px rgba(212, 175, 55, 0.18);
-    }
-
-    .price-item-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex: 1;
-      min-width: 0;
-    }
-
-    .price-check {
-      width: 20px;
-      height: 20px;
-      border-radius: 6px;
-      border: 1.5px solid rgba(255, 255, 255, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: all 0.2s ease;
-      background: rgba(0, 0, 0, 0.3);
-      color: transparent;
-    }
-
-    .price-item.selected .price-check {
-      background: var(--gold-gradient);
-      border-color: var(--gold-primary);
-      color: #0b0c10;
-    }
-
-    .price-name {
-      color: var(--text-main);
-      font-weight: 500;
-      white-space: normal;
-    }
-
-    .price-leader {
-      flex: 1;
-      border-bottom: 1px dotted rgba(212, 175, 55, 0.35);
-      margin: 0 4px;
-      min-width: 14px;
-      position: relative;
-      top: -3px;
-    }
-
-    .price-cost {
-      font-weight: 700;
-      color: var(--gold-light);
-      white-space: nowrap;
-      font-variant-numeric: tabular-nums;
-      flex-shrink: 0;
-    }
-
-    /* ==========================================================================
-       6. ПОЧЕМУ К НАМ
-       ========================================================================== */
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    .feature-card {
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: var(--radius-md);
-      padding: 22px 20px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      transition: border-color 0.25s ease;
-    }
-
-    .feature-card:hover {
-      border-color: var(--gold-border);
-    }
-
-    .feature-icon-box {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: rgba(212, 175, 55, 0.1);
-      border: 1px solid var(--gold-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-primary);
-      flex-shrink: 0;
-    }
-
-    .feature-content h4 {
-      font-size: 1.08rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 5px;
-    }
-
-    .feature-content p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.45;
-    }
-
-    /* ==========================================================================
-       7. КАК ЗАПИСАТЬСЯ (3 ШАГА)
-       ========================================================================== */
-    .steps-section {
-      background: linear-gradient(180deg, transparent 0%, rgba(18, 19, 24, 0.3) 100%);
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    .step-card {
-      background: var(--bg-card);
-      border: 1px solid var(--gold-border);
-      border-radius: var(--radius-md);
-      padding: 24px 20px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .step-number {
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      font-weight: 900;
-      background: var(--gold-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 8px;
-      display: inline-block;
+    .gold-button-gradient:hover {
+      background: linear-gradient(135deg, #F7E3A6 0%, #DFBE6F 55%, #CEAA54 100%);
     }
-
-    .step-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 6px;
-    }
-
-    .step-desc {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.45;
-    }
-
-    /* ==========================================================================
-       8. НАШИ РАБОТЫ (INSTAGRAM БЛОК)
-       ========================================================================== */
-    .instagram-card {
-      background: linear-gradient(135deg, rgba(22, 24, 33, 0.95) 0%, rgba(16, 17, 23, 0.95) 100%);
-      border: 1px solid var(--gold-border);
-      border-radius: var(--radius-lg);
-      padding: 34px 22px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 18px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    .insta-icon-wrapper {
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
-      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      box-shadow: 0 6px 18px rgba(220, 39, 67, 0.35);
-    }
-
-    .insta-title {
-      font-family: var(--font-serif);
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .insta-desc {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      max-width: 480px;
-      line-height: 1.5;
-    }
-
-    .btn-insta {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #ffffff;
-      font-weight: 600;
-      padding: 12px 24px;
-      border-radius: var(--radius-md);
-    }
-
-    .btn-insta:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-    /* ==========================================================================
-       9. КОНТАКТЫ И ТОЧНАЯ КАРТА
-       ========================================================================== */
-    .contacts-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .contact-item-card {
-      background: var(--bg-card);
-      border: 1px solid var(--gold-border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .contact-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: rgba(212, 175, 55, 0.1);
-      border: 1px solid var(--gold-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-primary);
-      flex-shrink: 0;
-    }
-
-    .contact-info {
-      flex: 1;
-    }
-
-    .contact-info h4 {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 4px;
-    }
-
-    .contact-info p,
-    .contact-info a {
-      font-size: 1.05rem;
-      color: #ffffff;
-      font-weight: 600;
-      line-height: 1.4;
-    }
-
-    .contact-info a:hover {
-      color: var(--gold-light);
-    }
-
-    /* Контейнер интерактивной карты */
-    .map-container {
-      background: var(--bg-card);
-      border: 1px solid var(--gold-border);
-      border-radius: var(--radius-lg);
-      padding: 14px;
-      margin-bottom: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .map-frame-wrapper {
-      width: 100%;
-      height: 260px;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      background: #181922;
-      position: relative;
-    }
-
-    .map-iframe {
-      width: 100%;
-      height: 260px;
-      border: 0;
-      display: block;
-      filter: invert(90%) hue-rotate(180deg) contrast(1.1) brightness(0.9);
-      transition: filter 0.3s ease;
-    }
-
-    .map-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-    }
-
-    .btn-2gis, .btn-route {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      padding: 13px 20px;
-      border-radius: var(--radius-md);
-      flex: 1;
-      text-align: center;
-    }
-
-    .btn-2gis {
-      background: #1e2029;
-      border: 1px solid var(--gold-border-strong);
-      color: #ffffff;
-    }
-
-    .btn-2gis:hover {
-      background: #252834;
-      border-color: var(--gold-primary);
-      color: var(--gold-light);
-      transform: translateY(-2px);
-    }
-
-    .btn-route {
-      background: rgba(212, 175, 55, 0.12);
-      border: 1px solid var(--gold-primary);
-      color: var(--gold-light);
-    }
-
-    .btn-route:hover {
-      background: var(--gold-gradient);
-      color: #0b0c10;
-      transform: translateY(-2px);
-    }
-
-    /* ==========================================================================
-       10. ФИНАЛЬНЫЙ БЛОК С ПРИЗЫВОМ
-       ========================================================================== */
-    .final-cta {
-      padding: 50px 0 30px;
-    }
-
-    .final-cta-box {
-      background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, rgba(18, 19, 24, 0.98) 70%);
-      border: 1px solid var(--gold-border-strong);
-      border-radius: var(--radius-lg);
-      padding: 40px 20px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    .final-cta-title {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 12px;
-      line-height: 1.25;
-    }
-
-    .final-cta-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      max-width: 500px;
-      margin-bottom: 24px;
-      line-height: 1.5;
-    }
-
-    /* ==========================================================================
-       11. ПОДВАЛ (FOOTER)
-       ========================================================================== */
-    .site-footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 24px 0 32px;
-      text-align: center;
-      font-size: 0.82rem;
-      color: var(--text-dim);
-    }
-
-    .footer-brand {
-      margin-bottom: 8px;
-      color: var(--text-muted);
-    }
-
-    /* ==========================================================================
-       12. ПЛАВАЮЩАЯ КНОПКА WHATSAPP (СПРАВА ВНИЗУ, СКРУГЛЁННАЯ С ЗЕЛЁНЫМ СВЕЧЕНИЕМ)
-       ========================================================================== */
-    .floating-wa-btn {
-      position: fixed;
-      bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-      right: 20px;
-      z-index: 999;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background-color: var(--wa-color);
-      color: #0b0c10;
-      font-weight: 800;
-      font-size: 0.95rem;
-      padding: 13px 22px;
-      border-radius: 9999px;
-      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0, 0, 0, 0.35);
-      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, background-color 0.2s ease;
-      user-select: none;
-      -webkit-tap-highlight-color: transparent;
-      line-height: 1.2;
-    }
-
-    .floating-wa-btn:hover {
-      background-color: #28e06e;
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
-      color: #060e0a;
-    }
-
-    .floating-wa-btn:active {
-      transform: translateY(0) scale(0.98);
-      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-    }
-
-    .floating-wa-icon {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-      flex-shrink: 0;
-      display: block;
-    }
-
-    .floating-wa-text {
-      white-space: nowrap;
-      letter-spacing: 0.01em;
-    }
-
-    /* На совсем узких экранах скрываем текст при невыбранных услугах для компактности */
-    @media (max-width: 340px) {
-      .floating-wa-btn {
-        padding: 12px 16px;
-      }
-      .floating-wa-text {
-        font-size: 0.85rem;
-      }
-    }
-
-    /* ==========================================================================
-       13. МЕДИА-ЗАПРОСЫ (ПЛАНШЕТЫ И ДЕСКТОПЫ)
-       ========================================================================== */
-    @media (min-width: 640px) {
-      .section-title {
-        font-size: 2.2rem;
-      }
-
-      .hero-title {
-        font-size: 3.6rem;
-      }
-
-      .nav-links {
-        display: flex;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-      }
-
-      .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      .steps-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-      }
-
-      .contacts-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      .map-actions {
-        flex-direction: row;
-      }
-
-      .floating-wa-btn {
-        bottom: 26px;
-        right: 26px;
-        font-size: 1rem;
-        padding: 14px 26px;
-      }
-    }
-
-    @media (min-width: 900px) {
-      .hero-title {
-        font-size: 4.2rem;
-      }
 
-      .price-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-      }
+    .price-dots {
+      background-image: radial-gradient(circle, #6B5D45 1.2px, transparent 1.2px);
+      background-position: bottom;
+      background-size: 7px 2px;
+      background-repeat: repeat-x;
     }
   </style>
 </head>
-<body>
+<body class="bg-[#080808] text-[#F5F5F5] antialiased selection:bg-[#D6B15E] selection:text-[#080808]">
 
-  <!-- ==========================================================================
-       1. ЛИПКОЕ ВЕРХНЕЕ МЕНЮ
-       ========================================================================== -->
-  <header class="site-header">
-    <div class="container nav-inner">
-      <a href="#hero" class="brand-link" aria-label="Стильстан Главная">
-        <div class="brand-crown-mini">
-          <svg width="20" height="15" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L15.5 8.5L21.5 4.5L19 16H5L2.5 4.5L8.5 8.5L12 2Z" fill="url(#goldCrownGradNav)" stroke="#d4af37" stroke-width="1.2" stroke-linejoin="round"/>
-            <circle cx="12" cy="2" r="1.5" fill="#fae292"/>
-            <circle cx="2.5" cy="4.5" r="1.3" fill="#fae292"/>
-            <circle cx="21.5" cy="4.5" r="1.3" fill="#fae292"/>
-            <defs>
-              <linearGradient id="goldCrownGradNav" x1="2.5" y1="2" x2="21.5" y2="16" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#fae292"/>
-                <stop offset="0.5" stop-color="#d4af37"/>
-                <stop offset="1" stop-color="#9e7b16"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <span class="part-white">СТИЛЬ</span><span class="part-gold">СТАН</span>
+  <!-- ======================================================================
+       1. КОМПАКТНАЯ ШАПКА САЙТА (HEADER)
+  ======================================================================= -->
+  <header
+    id="site-header"
+    class="sticky top-0 z-40 bg-[#080808]/95 backdrop-blur-md border-b border-[#35302A] py-2.5 shadow-xl shadow-black/70"
+  >
+    <div class="max-w-4xl mx-auto px-3.5 sm:px-6 flex items-center justify-between gap-2">
+      <!-- Логотип STIL.STAN -->
+      <a
+        href="#top"
+        class="flex items-center gap-2.5 group focus:outline-none"
+        aria-label="СТИЛЬСТАН STIL.STAN"
+      >
+        <svg
+          width="38"
+          height="38"
+          viewBox="0 0 120 120"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="shrink-0 select-none"
+          role="img"
+          aria-label="Логотип STIL.STAN"
+        >
+          <circle cx="60" cy="60" r="58" fill="#050505" stroke="#D6B15E" stroke-width="2.5" />
+          <path d="M39 39H81L82.5 47H78.5C77.5 43.2 75.2 42 70 42H64V73C64 76.8 65.4 77.8 69.5 78.2V81H50.5V78.2C54.6 77.8 56 76.8 56 73V42H50C44.8 42 42.5 43.2 41.5 47H37.5L39 39Z" fill="#D6B15E" />
+          <path d="M72.5 28.5C68.5 28.5 67.2 29.8 66.2 29.8C64.8 29.8 61.5 27.5 55.5 27.5C46.2 27.5 40.5 33.2 40.5 40.5C40.5 48.2 47.2 51.8 56.5 55.2C64.2 58 68.5 60.4 68.5 65.8C68.5 70.8 64.2 74.2 57.5 74.2C49.5 74.2 44.5 69.2 42.8 61.5H39.5L40.8 75.5C44.2 75.5 45.5 74.4 46.8 74.4C48.2 74.4 52.2 76.8 58.2 76.8C68.8 76.8 75.5 70.8 75.5 62.8C75.5 54.8 69.2 50.8 59.5 47.2C51.5 44.2 47.2 41.8 47.2 36.8C47.2 32.5 51 29.8 56.8 29.8C63.8 29.8 68.2 33.8 69.8 40.2H73L72.5 28.5Z" fill="#F5F5F5" />
+          <text x="60" y="93.5" text-anchor="middle" fill="#D6B15E" font-family="Georgia, serif" font-weight="700" font-size="9.3" letter-spacing="1.6">BARBER SHOP</text>
+        </svg>
+
+        <div class="flex flex-col">
+          <div class="flex items-center tracking-wider font-extrabold text-base sm:text-lg leading-none">
+            <span class="silver-text-gradient">СТИЛЬ</span>
+            <span class="gold-text-gradient">СТАН</span>
+          </div>
+          <span class="text-[9px] sm:text-[10px] tracking-[0.2em] text-[#A7A7A7] uppercase mt-0.5">
+            Кочкор-Ата, 446 • 10:00–23:00
+          </span>
         </div>
       </a>
 
-      <div class="nav-actions">
-        <nav class="nav-links">
-          <a href="#prices" class="nav-link" data-i18n="nav_prices">Цены</a>
-          <a href="#why-us" class="nav-link" data-i18n="nav_why">Почему мы</a>
-          <a href="#contacts" class="nav-link" data-i18n="nav_contacts">Контакты</a>
-        </nav>
+      <!-- Быстрые ссылки по 3 главным блокам (без лишней воды) -->
+      <nav class="hidden md:flex items-center gap-5 text-xs font-semibold text-[#E5E5E5]">
+        <a href="#prices" class="hover:text-[#F0D58A] transition-colors">Прайс-лист</a>
+        <a href="#booking" class="hover:text-[#F0D58A] transition-colors">Под запись</a>
+        <a href="#contacts" class="hover:text-[#F0D58A] transition-colors">Адрес и карта</a>
+      </nav>
 
-        <!-- Переключатель языка РУС / КЫР -->
-        <div class="lang-switcher" role="group" aria-label="Переключение языка">
-          <button type="button" class="lang-btn active" id="btn-ru" onclick="setLanguage('ru')">РУС</button>
-          <button type="button" class="lang-btn" id="btn-kg" onclick="setLanguage('kg')">КЫР</button>
-        </div>
+      <!-- Кнопки: Звонок + Запись -->
+      <div class="flex items-center gap-2">
+        <a
+          href="tel:+996705050647"
+          data-config-phone-link
+          class="inline-flex items-center gap-1.5 text-xs font-bold text-[#F5F5F5] hover:text-[#F0D58A] px-2.5 py-2 rounded-lg border border-[#35302A] bg-[#111111]"
+          title="Позвонить"
+        >
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#D6B15E]"></i>
+          <span class="hidden sm:inline" data-config-phone-display>+996 705 050 647</span>
+        </a>
+
+        <a
+          href="#booking"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-extrabold text-[#080808] gold-button-gradient shadow-md"
+        >
+          <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i>
+          <span>Записаться</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- ==========================================================================
-       2. HERO БЛОК
-       ========================================================================== -->
-  <section class="hero-section" id="hero">
-    <div class="container">
-      <div class="crown-wrapper" aria-hidden="true">
-        <svg width="48" height="36" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L15.5 8.5L21.5 4.5L19 16H5L2.5 4.5L8.5 8.5L12 2Z" fill="url(#goldCrownHero)" stroke="#d4af37" stroke-width="1.3" stroke-linejoin="round"/>
-          <circle cx="12" cy="2" r="1.5" fill="#ffffff"/>
-          <circle cx="2.5" cy="4.5" r="1.4" fill="#ffffff"/>
-          <circle cx="21.5" cy="4.5" r="1.4" fill="#ffffff"/>
-          <defs>
-            <linearGradient id="goldCrownHero" x1="2" y1="2" x2="22" y2="16" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#fae292"/>
-              <stop offset="0.5" stop-color="#d4af37"/>
-              <stop offset="1" stop-color="#8a670e"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
+  <main id="top" class="max-w-3xl mx-auto px-3 sm:px-6 pt-4 pb-12 space-y-6">
 
-      <h1 class="hero-title">
-        <span class="part-white">СТИЛЬ</span><span class="part-gold">СТАН</span>
-      </h1>
+    <!-- ======================================================================
+         2. ПЕРВЫЙ ЭКРАН + ПОЛНЫЙ ПРАЙС-ЛИСТ СРАЗУ ПЕРЕД ГЛАЗАМИ
+         Клиент заходит на сайт и БЕЗ долгой прокрутки сразу видит бренд,
+         адрес (Кочкор-Ата, 446), все 11 цен и кнопки быстрой записи!
+    ======================================================================= -->
+    <section id="prices" aria-labelledby="prices-heading">
+      <div class="rounded-2xl bg-[#0B0B0B] p-2 sm:p-3.5 border-2 border-[#35302A] shadow-2xl">
+        <div class="rounded-xl border border-[#D6B15E]/75 px-3.5 py-5 sm:px-7 sm:py-6 bg-gradient-to-b from-[#141414] via-[#090909] to-[#121212]">
 
-      <p class="hero-slogan" data-i18n="hero_slogan">Стиль • Качество • Уверенность</p>
+          <!-- Верхняя шапка табло: Корона + Усы + СТИЛЬСТАН + Адрес -->
+          <div class="text-center mb-4 sm:mb-5">
+            <div class="flex justify-center mb-1">
+              <svg width="96" height="38" viewBox="0 0 180 78" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#F5DF98" />
+                    <stop offset="50%" stop-color="#D6B15E" />
+                    <stop offset="100%" stop-color="#9A782E" />
+                  </linearGradient>
+                  <linearGradient id="crestSilver" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#FFFFFF" />
+                    <stop offset="65%" stop-color="#DCDCDC" />
+                    <stop offset="100%" stop-color="#9E9E9E" />
+                  </linearGradient>
+                </defs>
+                <path d="M72 24L67 10L80 17L90 5L100 17L113 10L108 24H72Z" fill="url(#crestGold)" />
+                <rect x="72" y="25.5" width="36" height="3" rx="1.5" fill="url(#crestGold)" />
+                <circle cx="66.5" cy="8" r="2" fill="#F0D58A" />
+                <circle cx="90" cy="3" r="2.2" fill="#F0D58A" />
+                <circle cx="113.5" cy="8" r="2" fill="#F0D58A" />
+                <path d="M90 42C82 33 67 31 54 39C42 46 34 55 23 53C15 51 13 43 18 37C12 43 10 55 20 63C32 72 54 69 72 59C81 54 87 48 90 44C93 48 99 54 108 59C126 69 148 72 160 63C170 55 168 43 162 37C167 43 165 51 157 53C146 55 138 46 126 39C113 31 98 33 90 42Z" fill="url(#crestSilver)" />
+              </svg>
+            </div>
 
-      <!-- ПЛАШКА СТАТУСА РАБОТЫ В HERO (ОТКРЫТО / СКОРО ЗАКРЫТИЕ / ЗАКРЫТО) -->
-      <div class="hero-status-container">
-        <div class="status-badge status-open js-status-badge" role="status" aria-live="polite">
-          <span class="status-dot"></span>
-          <span class="status-text">Загрузка статуса...</span>
+            <h1 id="prices-heading" class="text-2xl sm:text-4xl font-extrabold tracking-wider leading-none">
+              <span class="silver-text-gradient">СТИЛЬ</span><span class="gold-text-gradient">СТАН</span>
+            </h1>
+
+            <div class="flex items-center justify-center gap-3 my-1">
+              <span class="h-[1px] w-10 sm:w-20 bg-[#D6B15E]/70"></span>
+              <span class="text-[10px] sm:text-xs font-bold tracking-[0.35em] text-[#F5F5F5]">БАРБЕРШОП</span>
+              <span class="h-[1px] w-10 sm:w-20 bg-[#D6B15E]/70"></span>
+            </div>
+
+            <div class="text-[9px] sm:text-[11px] tracking-[0.22em] text-[#A7A7A7] uppercase">
+              СТИЛЬ <span class="text-[#D6B15E] mx-0.5">•</span> КАЧЕСТВО <span class="text-[#D6B15E] mx-0.5">•</span> УВЕРЕННОСТЬ
+            </div>
+
+            <!-- Компактная плашка с адресом и часами работы прямо над прайсом -->
+            <div class="mt-3 inline-flex flex-wrap items-center justify-center gap-x-4 gap-y-1 px-3 py-1.5 rounded-lg bg-[#141414] border border-[#35302A] text-[11px] sm:text-xs text-[#E5E5E5]">
+              <span class="inline-flex items-center gap-1 font-semibold">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#D6B15E]"></i>
+                <span data-config-address-short>Бишкек, ул. Кочкор-Ата, 446</span>
+              </span>
+              <span class="text-[#35302A]">|</span>
+              <span class="inline-flex items-center gap-1">
+                <i data-lucide="clock" class="w-3.5 h-3.5 text-[#D6B15E]"></i>
+                <span>Ежедневно <strong class="text-[#F0D58A]" data-config-hours>10:00–23:00</strong></span>
+              </span>
+            </div>
+          </div>
+
+          <!-- СПИСОК ВСЕХ 11 УСЛУГ (УЗУНУНАН, НА ОДНОМ ЭКРАНЕ) -->
+          <div id="services-board-list" class="space-y-3.5"></div>
+
+          <!-- Быстрые кнопки прямо внутри прайс-листа -->
+          <div class="mt-5 pt-4 border-t border-[#D6B15E]/40 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <a
+              href="https://wa.me/996705050647"
+              data-whatsapp-quick
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-extrabold text-[#080808] gold-button-gradient shadow-lg"
+            >
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Записаться в WhatsApp</span>
+            </a>
+            <a
+              href="tel:+996705050647"
+              data-config-phone-link
+              class="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold text-[#F5F5F5] bg-[#181818] hover:bg-[#222222] border border-[#35302A]"
+            >
+              <i data-lucide="phone" class="w-4 h-4 text-[#D6B15E]"></i>
+              <span>Позвонить: <span data-config-phone-display>+996 705 050 647</span></span>
+            </a>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <p class="hero-description" data-i18n="hero_desc">
-        Премиальный барбершоп в Бишкеке. Профессиональный уход за стрижкой и бородой для мужчин, которые выбирают точность в каждой детали.
-      </p>
+    <!-- ======================================================================
+         3. КОМПАКТНЫЙ БЛОК «ПОД ЗАПИСЬ» (СРАЗУ ЧУТЬ НИЖЕ ПРАЙС-ЛИСТА!)
+         Как попросил клиент в голосовом: «Киргенде минимум кичине ылдыйга түшүрүп, под запись...»
+         Никаких лишних окон и длинных анкет — всё в одном компактном блоке!
+    ======================================================================= -->
+    <section
+      id="booking"
+      class="rounded-2xl bg-[#111111] border border-[#35302A] p-4 sm:p-6 shadow-xl"
+      aria-labelledby="booking-heading"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 mb-4 border-b border-[#35302A]">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#D6B15E] block">
+            Быстрая онлайн-запись
+          </span>
+          <h2 id="booking-heading" class="font-luxury-serif text-2xl sm:text-3xl font-bold text-[#F5F5F5]">
+            Записаться на стрижку
+          </h2>
+        </div>
+        <span
+          id="preview-price-badge"
+          class="self-start sm:self-auto px-3 py-1 rounded-full text-xs font-extrabold bg-[#181818] text-[#F0D58A] border border-[#D6B15E]/40"
+        >
+          Мужские стрижки — 400 сом
+        </span>
+      </div>
 
+      <form id="booking-form" class="space-y-3.5" novalidate>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <!-- Выбор услуги -->
+          <div>
+            <label for="booking-service" class="block text-[11px] font-bold uppercase tracking-wider text-[#A7A7A7] mb-1">
+              Услуга
+            </label>
+            <select
+              id="booking-service"
+              name="service"
+              class="w-full rounded-xl bg-[#181818] border border-[#35302A] focus:border-[#D6B15E] focus:outline-none px-3.5 py-2.5 text-sm text-[#F5F5F5] font-semibold"
+            ></select>
+          </div>
+
+          <!-- Ваше имя -->
+          <div>
+            <label for="booking-name" class="block text-[11px] font-bold uppercase tracking-wider text-[#A7A7A7] mb-1">
+              Ваше имя (необязательно)
+            </label>
+            <input
+              id="booking-name"
+              name="clientName"
+              type="text"
+              maxlength="60"
+              placeholder="Как к вам обращаться?"
+              class="w-full rounded-xl bg-[#181818] border border-[#35302A] focus:border-[#D6B15E] focus:outline-none px-3.5 py-2.5 text-sm text-[#F5F5F5] placeholder:text-[#A7A7A7]/50"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <!-- Дата -->
+          <div>
+            <label for="booking-date" class="block text-[11px] font-bold uppercase tracking-wider text-[#A7A7A7] mb-1">
+              Дата (по желанию)
+            </label>
+            <input
+              id="booking-date"
+              name="desiredDate"
+              type="date"
+              class="w-full rounded-xl bg-[#181818] border border-[#35302A] focus:border-[#D6B15E] focus:outline-none px-3 py-2 text-xs sm:text-sm text-[#F5F5F5] [color-scheme:dark]"
+            />
+          </div>
+
+          <!-- Время -->
+          <div>
+            <label for="booking-time" class="block text-[11px] font-bold uppercase tracking-wider text-[#A7A7A7] mb-1">
+              Время (10:00–23:00)
+            </label>
+            <input
+              id="booking-time"
+              name="desiredTime"
+              type="time"
+              min="10:00"
+              max="23:00"
+              class="w-full rounded-xl bg-[#181818] border border-[#35302A] focus:border-[#D6B15E] focus:outline-none px-3 py-2 text-xs sm:text-sm text-[#F5F5F5] [color-scheme:dark]"
+            />
+          </div>
+        </div>
+
+        <p id="booking-error-msg" class="hidden text-xs text-amber-400" role="alert"></p>
+
+        <button
+          type="submit"
+          class="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm sm:text-base font-extrabold text-[#080808] gold-button-gradient shadow-lg shadow-[#D6B15E]/20 transition-all"
+        >
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Отправить заявку в WhatsApp</span>
+        </button>
+      </form>
+    </section>
+
+    <!-- ======================================================================
+         4. КОМПАКТНЫЕ КОНТАКТЫ И КАРТА (КОЧКОР-АТА, 446)
+    ======================================================================= -->
+    <section
+      id="contacts"
+      class="rounded-2xl bg-[#111111] border border-[#35302A] p-4 sm:p-6 shadow-xl space-y-4"
+      aria-labelledby="contacts-heading"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#D6B15E] block">
+            Адрес и маршрут
+          </span>
+          <h2 id="contacts-heading" class="font-luxury-serif text-2xl sm:text-3xl font-bold text-[#F5F5F5]">
+            Бишкек, ул. Кочкор-Ата, 446
+          </h2>
+        </div>
+        <span class="text-xs text-[#A7A7A7]">
+          Работаем ежедневно: <strong class="text-[#F0D58A]" data-config-hours>10:00–23:00</strong>
+        </span>
+      </div>
+
+      <!-- 4 главные кнопки связи -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+        <a
+          href="tel:+996705050647"
+          data-config-phone-link
+          class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-bold text-[#F5F5F5] bg-[#181818] hover:bg-[#222222] border border-[#35302A]"
+        >
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-[#D6B15E]"></i>
+          <span>Позвонить</span>
+        </a>
+
+        <a
+          href="https://wa.me/996705050647"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-bold text-[#080808] gold-button-gradient"
+        >
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <a
+          href="https://www.instagram.com/stil.stan/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-bold text-[#F5F5F5] bg-[#181818] hover:bg-[#222222] border border-[#35302A]"
+        >
+          <i data-lucide="instagram" class="w-3.5 h-3.5 text-[#D6B15E]"></i>
+          <span>@stil.stan</span>
+        </a>
+
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=%D1%83%D0%BB.%20%D0%9A%D0%BE%D1%87%D0%BA%D0%BE%D1%80-%D0%90%D1%82%D0%B0%2C%20446%2C%20%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C%20%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%D1%81%D1%82%D0%B0%D0%BD"
+          data-map-directions-link
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-xs font-bold text-[#F0D58A] bg-[#181818] hover:bg-[#222222] border border-[#D6B15E]/50"
+        >
+          <i data-lucide="navigation" class="w-3.5 h-3.5 text-[#D6B15E]"></i>
+          <span>Маршрут</span>
+        </a>
+      </div>
+
+      <!-- Компактная карта Google Maps -->
+      <div class="relative w-full h-[230px] sm:h-[270px] rounded-xl overflow-hidden bg-[#181818] border border-[#35302A]">
+        <iframe
+          id="google-map-iframe"
+          title="Карта — Барбершоп СТИЛЬСТАН, Бишкек, ул. Кочкор-Ата, 446"
+          src="https://maps.google.com/maps?q=%D1%83%D0%BB.%20%D0%9A%D0%BE%D1%87%D0%BA%D0%BE%D1%80-%D0%90%D1%82%D0%B0%2C%20446%2C%20%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA%2C%20%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%D1%81%D1%82%D0%B0%D0%BD&output=embed"
+          class="w-full h-full border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Компактный подвал -->
+  <footer class="border-t border-[#35302A] py-5 text-center text-xs text-[#A7A7A7]">
+    <div class="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
       <div>
-        <a href="https://wa.me/996705050647" 
-           class="btn btn-wa-hero js-wa-link" 
-           target="_blank" 
-           rel="noopener noreferrer">
-          <span class="btn-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8.01 12.27C8.14 12.44 9.76 14.94 12.24 16C12.83 16.27 13.28 16.42 13.64 16.53C14.23 16.72 14.77 16.69 15.2 16.63C15.68 16.55 16.68 16.02 16.89 15.43C17.1 14.84 17.1 14.34 17.03 14.23C16.97 14.12 16.81 14.06 16.56 13.93C16.32 13.81 15.13 13.22 14.9 13.14C14.68 13.06 14.52 13.02 14.35 13.27C14.19 13.51 13.72 14.06 13.58 14.23C13.43 14.39 13.29 14.41 13.05 14.29C12.8 14.16 11.77 13.83 10.54 12.73C9.58 11.88 8.93 10.82 8.81 10.61C8.69 10.4 8.79 10.29 8.91 10.17C9.02 10.06 9.16 9.88 9.28 9.74C9.4 9.6 9.44 9.5 9.52 9.33C9.6 9.17 9.56 9.02 9.5 8.9C9.44 8.78 8.97 7.62 8.77 7.15C8.58 6.69 8.38 6.75 8.23 6.74C8.08 6.74 7.91 6.74 7.74 6.74L8.53 7.33Z"/>
-            </svg>
-          </span>
-          <span data-i18n="cta_whatsapp">Записаться в WhatsApp</span>
-        </a>
+        © <span id="current-year">2026</span> <strong>СТИЛЬСТАН (STIL.STAN)</strong> • Бишкек, ул. Кочкор-Ата, 446
       </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       3. ТРИ КАРТОЧКИ ФАКТОВ
-       ========================================================================== -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-value gold">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#fae292" style="margin-right:2px;">
-              <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/>
-            </svg>
-            <span>5.0</span>
-          </div>
-          <div class="stat-label" data-i18n="stat_rating">Оценка в 2ГИС</div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-value">94</div>
-          <div class="stat-label" data-i18n="stat_reviews">Отзыва в 2ГИС</div>
-        </div>
-
-        <div class="stat-card">
-          <div class="stat-value">10:00–23:00</div>
-          <div class="stat-label" data-i18n="stat_hours">Ежедневно</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       4. ПРАЙС-ЛИСТ (КЛИКАБЕЛЬНЫЕ СТРОКИ С ВЫБОРОМ УСЛУГ)
-       ========================================================================== -->
-  <section class="prices-section" id="prices">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge" data-i18n="badge_prices">Цены</span>
-        <h2 class="section-title" data-i18n="title_prices">Прайс-лист</h2>
-        <p class="section-desc" data-i18n="desc_prices">Прозрачная стоимость услуг без скрытых доплат. Все цены указаны в сомах.</p>
-        <div class="price-selection-bar">
-          <span data-i18n="hint_select_service">👆 Нажмите на услугу, чтобы выбрать её перед записью</span>
-          <button type="button" class="btn-clear-inline" id="btn-clear-inline" onclick="clearServiceSelection()" data-i18n="btn_clear">
-            ✕ Сбросить
-          </button>
-        </div>
-      </div>
-
-      <div class="price-grid">
-        <!-- Карточка 1: Стрижки -->
-        <div class="price-card">
-          <div class="price-card-header">
-            <div class="price-card-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="6" cy="6" r="3"></circle>
-                <circle cx="6" cy="18" r="3"></circle>
-                <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
-                <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
-                <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
-              </svg>
-            </div>
-            <h3 class="price-card-title" data-i18n="cat_haircuts">Стрижки</h3>
-          </div>
-          <ul class="price-list">
-            <li class="price-item js-price-item" data-id="male" data-price="400" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_male">Мужская</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">400 сом</span>
-            </li>
-
-            <li class="price-item js-price-item" data-id="child" data-price="300" data-is-range="true" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_child">Детская (до 12 лет)</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">300 / 400 сом</span>
-            </li>
-
-            <li class="price-item js-price-item" data-id="machine" data-price="150" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_machine">Под машинку</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">150 сом</span>
-            </li>
-
-            <li class="price-item js-price-item" data-id="styling" data-price="150" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_styling">Укладка</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">150 сом</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Карточка 2: Борода -->
-        <div class="price-card">
-          <div class="price-card-header">
-            <div class="price-card-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 3v4"></path>
-                <path d="M17 3v4"></path>
-                <rect x="3" y="7" width="18" height="6" rx="2"></rect>
-                <path d="M7 13v7a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-7"></path>
-              </svg>
-            </div>
-            <h3 class="price-card-title" data-i18n="cat_beard">Борода</h3>
-          </div>
-          <ul class="price-list">
-            <li class="price-item js-price-item" data-id="modeling" data-price="300" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_modeling">Моделирование</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">300 сом</span>
-            </li>
-
-            <li class="price-item js-price-item" data-id="royal_shave" data-price="300" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_royal_shave">Королевское бритьё</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">300 сом</span>
-            </li>
-
-            <li class="price-item js-price-item" data-id="camo" data-price="300" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_camo">Камуфляж бороды</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">300 сом</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Карточка 3: Дополнительно -->
-        <div class="price-card">
-          <div class="price-card-header">
-            <div class="price-card-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-            </div>
-            <h3 class="price-card-title" data-i18n="cat_additional">Дополнительно</h3>
-          </div>
-          <ul class="price-list">
-            <li class="price-item js-price-item" data-id="mask" data-price="600" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_mask">Чистка лица + Black Mask</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">600 сом</span>
-            </li>
-
-            <li class="price-item js-price-item" data-id="scrab" data-price="300" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_scrab">Чистка лица + Scrab</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">300 сом</span>
-            </li>
-
-            <li class="price-item js-price-item" data-id="wax" data-price="200" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_wax">Горячий воск</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">200 сом</span>
-            </li>
-
-            <li class="price-item js-price-item" data-id="toning" data-price="500" data-is-range="false" role="button" tabindex="0">
-              <div class="price-item-left">
-                <div class="price-check" aria-hidden="true">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </div>
-                <span class="price-name" data-i18n="p_toning">Тонирование волос</span>
-              </div>
-              <span class="price-leader"></span>
-              <span class="price-cost">500 сом</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       5. ПОЧЕМУ К НАМ
-       ========================================================================== -->
-  <section id="why-us">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge" data-i18n="badge_why">Преимущества</span>
-        <h2 class="section-title" data-i18n="title_why">Почему выбирают «Стильстан»</h2>
-        <p class="section-desc" data-i18n="desc_why">Внимание к сервису и комфорту каждого гостя в самом сердце Бишкека.</p>
-      </div>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon-box" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"/>
-            </svg>
-          </div>
-          <div class="feature-content">
-            <h4 data-i18n="why_rate_title">Оценка 5.0 в 2ГИС</h4>
-            <p data-i18n="why_rate_desc">94 реальных отзыва от постоянных клиентов подтверждают безупречное мастерство и тёплый приём.</p>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-box" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-          </div>
-          <div class="feature-content">
-            <h4 data-i18n="why_hours_title">Работаем до 23:00</h4>
-            <p data-i18n="why_hours_desc">Открыты ежедневно с 10:00 до 23:00 без выходных. Легко успеть на стрижку даже после насыщенного дня.</p>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-box" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
-          <div class="feature-content">
-            <h4 data-i18n="why_kids_title">Стрижём детей до 12 лет</h4>
-            <p data-i18n="why_kids_desc">Опытные барберы находят подход к юным джентльменам, создавая аккуратные и стильные причёски без стресса.</p>
-          </div>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-box" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
-              <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
-              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
-              <line x1="12" y1="20" x2="12.01" y2="20"></line>
-            </svg>
-          </div>
-          <div class="feature-content">
-            <h4 data-i18n="why_wifi_title">Wi-Fi для клиентов</h4>
-            <p data-i18n="why_wifi_desc">Бесплатный скоростной интернет в салоне: оставайтесь на связи или отдыхайте во время визита.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       6. КАК ЗАПИСАТЬСЯ (3 ШАГА)
-       ========================================================================== -->
-  <section class="steps-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge" data-i18n="badge_steps">Простой процесс</span>
-        <h2 class="section-title" data-i18n="title_steps">Как записаться</h2>
-        <p class="section-desc" data-i18n="desc_steps">Три простых шага до вашей идеальной стрижки.</p>
-      </div>
-
-      <div class="steps-grid">
-        <div class="step-card">
-          <span class="step-number">01</span>
-          <h3 class="step-title" data-i18n="step1_title">Выберите услугу</h3>
-          <p class="step-desc" data-i18n="step1_desc">Ознакомьтесь с прайсом выше и нажмите на нужные услуги, чтобы рассчитать сумму.</p>
-        </div>
-
-        <div class="step-card">
-          <span class="step-number">02</span>
-          <h3 class="step-title" data-i18n="step2_title">Напишите в WhatsApp</h3>
-          <p class="step-desc" data-i18n="step2_desc">Нажмите плавающую кнопку «Записаться» — готовый список выбранных процедур добавится в сообщение.</p>
-        </div>
-
-        <div class="step-card">
-          <span class="step-number">03</span>
-          <h3 class="step-title" data-i18n="step3_title">Приходите за стилем</h3>
-          <p class="step-desc" data-i18n="step3_desc">Ждём вас по адресу ул. Урмат, 16. Мастера позаботятся о вашем безупречном образе.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       7. НАШИ РАБОТЫ (INSTAGRAM)
-       ========================================================================== -->
-  <section>
-    <div class="container">
-      <div class="instagram-card">
-        <div class="insta-icon-wrapper" aria-hidden="true">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-        </div>
-        <h2 class="insta-title" data-i18n="title_insta">Наши работы</h2>
-        <p class="insta-desc" data-i18n="desc_insta">
-          Смотрите фото свежих стрижек, процесс моделирования бороды и атмосферу нашего барбершопа в официальном аккаунте.
-        </p>
-        <a href="https://instagram.com/stil.stan" target="_blank" rel="noopener noreferrer" class="btn btn-insta">
-          <span data-i18n="btn_insta">Смотреть в Instagram @stil.stan</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="7" y1="17" x2="17" y2="7"></line>
-            <polyline points="7 7 17 7 17 17"></polyline>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       8. КОНТАКТЫ И КАРТА С МЕТКОЙ НА «СТИЛЬСТАН»
-       ========================================================================== -->
-  <section id="contacts">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge" data-i18n="badge_contacts">Локация</span>
-        <h2 class="section-title" data-i18n="title_contacts">Контакты</h2>
-        <p class="section-desc" data-i18n="desc_contacts">Всегда рады видеть вас в барбершопе «Стильстан».</p>
-      </div>
-
-      <div class="contacts-grid">
-        <div class="contact-item-card">
-          <div class="contact-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-          </div>
-          <div class="contact-info">
-            <h4 data-i18n="c_addr_label">Адрес</h4>
-            <p data-i18n="c_addr_val">ул. Урмат, 16, Бишкек</p>
-          </div>
-        </div>
-
-        <div class="contact-item-card">
-          <div class="contact-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-          </div>
-          <div class="contact-info">
-            <h4 data-i18n="c_hours_label">Часы работы</h4>
-            <p data-i18n="c_hours_val">Ежедневно: 10:00–23:00</p>
-            <div style="margin-top: 8px;">
-              <div class="status-badge status-open js-status-badge" role="status" aria-live="polite">
-                <span class="status-dot"></span>
-                <span class="status-text">Загрузка статуса...</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-item-card">
-          <div class="contact-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-          </div>
-          <div class="contact-info">
-            <h4 data-i18n="c_phone1_label">Запись и WhatsApp</h4>
-            <p><a href="tel:+996705050647">+996 705 050 647</a></p>
-          </div>
-        </div>
-
-        <div class="contact-item-card">
-          <div class="contact-icon" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-          </div>
-          <div class="contact-info">
-            <h4 data-i18n="c_phone2_label">Дополнительный телефон</h4>
-            <p><a href="tel:+996705050643">+996 705 050 643</a></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- ВСТРОЕННАЯ КАРТА С ТОЧНЫМИ КООРДИНАТАМИ БАРБЕРШОПА -->
-      <div class="map-container">
-        <div class="map-frame-wrapper" id="map-frame-wrapper">
-          <!-- 
-            ТОЧНЫЕ КООРДИНАТЫ БАРБЕРШОПА «СТИЛЬСТАН» (Бишкек, ул. Урмат, 16/1):
-            Широта: 42.853146, Долгота: 74.49649 (из базы филиала 2ГИС)
-          -->
-          <iframe 
-            id="barber-map"
-            class="map-iframe"
-            title="Карта проезда: Стильстан, ул. Урмат, 16, Бишкек"
-            src="https://maps.google.com/maps?q=42.853146,74.49649&amp;z=17&amp;output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            onerror="hideMapOnError()">
-          </iframe>
-        </div>
-
-        <!-- Кнопки под картой: Прямая ссылка 2ГИС и Маршрут Google Maps -->
-        <div class="map-actions">
-          <a href="https://2gis.kg/bishkek/firm/70000001110682329" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="btn-2gis">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
-              <line x1="9" y1="3" x2="9" y2="18"></line>
-              <line x1="15" y1="6" x2="15" y2="21"></line>
-            </svg>
-            <span data-i18n="btn_2gis">Открыть в 2ГИС</span>
-          </a>
-
-          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=42.853146,74.49649" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="btn-route">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-            </svg>
-            <span data-i18n="btn_directions">Построить маршрут</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       9. ФИНАЛЬНЫЙ БЛОК С ПРИЗЫВОМ ЗАПИСАТЬСЯ
-       ========================================================================== -->
-  <section class="final-cta">
-    <div class="container">
-      <div class="final-cta-box">
-        <h2 class="final-cta-title" data-i18n="final_title">Готовы обновить свой стиль?</h2>
-        <p class="final-cta-desc" data-i18n="final_desc">
-          Запишитесь прямо сейчас через WhatsApp. Подберём удобное время и сделаем стрижку, которая подчеркнёт вашу уверенность.
-        </p>
-        <a href="https://wa.me/996705050647" 
-           class="btn btn-wa-hero js-wa-link" 
-           target="_blank" 
-           rel="noopener noreferrer">
-          <span class="btn-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8.01 12.27C8.14 12.44 9.76 14.94 12.24 16C12.83 16.27 13.28 16.42 13.64 16.53C14.23 16.72 14.77 16.69 15.2 16.63C15.68 16.55 16.68 16.02 16.89 15.43C17.1 14.84 17.1 14.34 17.03 14.23C16.97 14.12 16.81 14.06 16.56 13.93C16.32 13.81 15.13 13.22 14.9 13.14C14.68 13.06 14.52 13.02 14.35 13.27C14.19 13.51 13.72 14.06 13.58 14.23C13.43 14.39 13.29 14.41 13.05 14.29C12.8 14.16 11.77 13.83 10.54 12.73C9.58 11.88 8.93 10.82 8.81 10.61C8.69 10.4 8.79 10.29 8.91 10.17C9.02 10.06 9.16 9.88 9.28 9.74C9.4 9.6 9.44 9.5 9.52 9.33C9.6 9.17 9.56 9.02 9.5 8.9C9.44 8.78 8.97 7.62 8.77 7.15C8.58 6.69 8.38 6.75 8.23 6.74C8.08 6.74 7.91 6.74 7.74 6.74L8.53 7.33Z"/>
-            </svg>
-          </span>
-          <span data-i18n="cta_whatsapp">Записаться в WhatsApp</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ПОДВАЛ -->
-  <footer class="site-footer">
-    <div class="container">
-      <p class="footer-brand"><strong>СТИЛЬСТАН</strong> • Бишкек, ул. Урмат, 16</p>
-      <p data-i18n="footer_copy">© Стильстан — Барбершоп. Все права защищены.</p>
+      <a href="tel:+996705050647" data-config-phone-link class="text-[#F0D58A] font-semibold hover:underline">
+        +996 705 050 647
+      </a>
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       10. ПЛАВАЮЩАЯ КНОПКА WHATSAPP (СПРАВА ВНИЗУ, БЕЗ ФОНОВОЙ ПОЛОСЫ)
-       ========================================================================== -->
-  <a href="https://wa.me/996705050647" 
-     id="floating-wa-btn"
-     class="floating-wa-btn js-wa-link" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     aria-label="Записаться в WhatsApp">
-    <svg class="floating-wa-icon" viewBox="0 0 24 24">
-      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8.01 12.27C8.14 12.44 9.76 14.94 12.24 16C12.83 16.27 13.28 16.42 13.64 16.53C14.23 16.72 14.77 16.69 15.2 16.63C15.68 16.55 16.68 16.02 16.89 15.43C17.1 14.84 17.1 14.34 17.03 14.23C16.97 14.12 16.81 14.06 16.56 13.93C16.32 13.81 15.13 13.22 14.9 13.14C14.68 13.06 14.52 13.02 14.35 13.27C14.19 13.51 13.72 14.06 13.58 14.23C13.43 14.39 13.29 14.41 13.05 14.29C12.8 14.16 11.77 13.83 10.54 12.73C9.58 11.88 8.93 10.82 8.81 10.61C8.69 10.4 8.79 10.29 8.91 10.17C9.02 10.06 9.16 9.88 9.28 9.74C9.4 9.6 9.44 9.5 9.52 9.33C9.6 9.17 9.56 9.02 9.5 8.9C9.44 8.78 8.97 7.62 8.77 7.15C8.58 6.69 8.38 6.75 8.23 6.74C8.08 6.74 7.91 6.74 7.74 6.74L8.53 7.33Z"/>
-    </svg>
-    <span class="floating-wa-text" id="floating-wa-text">Записаться</span>
-  </a>
-
-  <!-- ==========================================================================
-       JS СКРИПТ: СТАТУС БИШКЕКА, ВЫБОР УСЛУГ, WHATSAPP, МУЛЬТИЯЗЫЧНОСТЬ
-       ========================================================================== -->
+  <!-- ======================================================================
+       ЕДИНЫЙ СКРИПТ КОНФИГУРАЦИИ И ЗАПИСИ В WHATSAPP
+  ======================================================================= -->
   <script>
-    /* ==========================================================================
-       КООРДИНАТЫ И ССЫЛКИ НА КАРТЫ: БАРБЕРШОП «СТИЛЬСТАН» (Бишкек, ул. Урмат, 16/1)
-       ========================================================================== */
-    const BARBER_LAT = "42.853146";
-    const BARBER_LNG = "74.49649";
-    const DGIS_URL = "https://2gis.kg/bishkek/firm/70000001110682329";
-
-    /* Переводы интерфейса (Русский / Кыргызский) */
-    const translations = {
-      ru: {
-        page_title: "Стильстан | Барбершоп в Бишкеке",
-        nav_prices: "Цены",
-        nav_why: "Почему мы",
-        nav_contacts: "Контакты",
-        hero_slogan: "Стиль • Качество • Уверенность",
-        hero_desc: "Премиальный барбершоп в Бишкеке. Профессиональный уход за стрижкой и бородой для мужчин, которые выбирают точность в каждой детали.",
-        cta_whatsapp: "Записаться в WhatsApp",
-
-        stat_rating: "Оценка в 2ГИС",
-        stat_reviews: "Отзыва в 2ГИС",
-        stat_hours: "Ежедневно",
-
-        badge_prices: "Цены",
-        title_prices: "Прайс-лист",
-        desc_prices: "Прозрачная стоимость услуг без скрытых доплат. Все цены указаны в сомах.",
-        hint_select_service: "👆 Нажмите на услугу, чтобы выбрать её перед записью",
-
-        cat_haircuts: "Стрижки",
-        p_male: "Мужская стрижка",
-        p_child: "Детская стрижка (до 12 лет)",
-        p_machine: "Стрижка под машинку",
-        p_styling: "Укладка",
-
-        cat_beard: "Борода",
-        p_modeling: "Моделирование бороды",
-        p_royal_shave: "Королевское бритьё",
-        p_camo: "Камуфляж бороды",
-
-        cat_additional: "Дополнительно",
-        p_mask: "Чистка лица + Black Mask",
-        p_scrab: "Чистка лица + Scrab",
-        p_wax: "Горячий воск",
-        p_toning: "Тонирование волос",
-
-        badge_why: "Преимущества",
-        title_why: "Почему выбирают «Стильстан»",
-        desc_why: "Внимание к сервису и комфорту каждого гостя в самом сердце Бишкека.",
-        why_rate_title: "Оценка 5.0 в 2ГИС",
-        why_rate_desc: "94 реальных отзыва от постоянных клиентов подтверждают безупречное мастерство и тёплый приём.",
-        why_hours_title: "Работаем до 23:00",
-        why_hours_desc: "Открыты ежедневно с 10:00 до 23:00 без выходных. Легко успеть на стрижку даже после насыщенного дня.",
-        why_kids_title: "Стрижём детей до 12 лет",
-        why_kids_desc: "Опытные барберы находят подход к юным джентльменам, создавая аккуратные и стильные причёски без стресса.",
-        why_wifi_title: "Wi-Fi для клиентов",
-        why_wifi_desc: "Бесплатный скоростной интернет в салоне: оставайтесь на связи или отдыхайте во время визита.",
-
-        badge_steps: "Простой процесс",
-        title_steps: "Как записаться",
-        desc_steps: "Три простых шага до вашей идеальной стрижки.",
-        step1_title: "Выберите услугу",
-        step1_desc: "Ознакомьтесь с прайсом выше и нажмите на нужные услуги, чтобы рассчитать сумму.",
-        step2_title: "Напишите в WhatsApp",
-        step2_desc: "Нажмите плавающую кнопку «Записаться» — готовый список выбранных процедур добавится в сообщение.",
-        step3_title: "Приходите за стилем",
-        step3_desc: "Ждём вас по адресу ул. Урмат, 16. Мастера позаботятся о вашем безупречном образе.",
-
-        title_insta: "Наши работы",
-        desc_insta: "Смотрите фото свежих стрижек, процесс моделирования бороды и атмосферу нашего барбершопа в официальном аккаунте.",
-        btn_insta: "Смотреть в Instagram @stil.stan",
-
-        badge_contacts: "Локация",
-        title_contacts: "Контакты",
-        desc_contacts: "Всегда рады видеть вас в барбершопе «Стильстан».",
-        c_addr_label: "Адрес",
-        c_addr_val: "ул. Урмат, 16, Бишкек",
-        c_hours_label: "Часы работы",
-        c_hours_val: "Ежедневно: 10:00–23:00",
-        c_phone1_label: "Запись и WhatsApp",
-        c_phone2_label: "Дополнительный телефон",
-        btn_2gis: "Открыть в 2ГИС",
-        btn_directions: "Построить маршрут",
-
-        final_title: "Готовы обновить свой стиль?",
-        final_desc: "Запишитесь прямо сейчас через WhatsApp. Подберём удобное время и сделаем стрижку, которая подчеркнёт вашу уверенность.",
-        footer_copy: "© Стильстан — Барбершоп. Все права защищены.",
-
-        /* Плавающая кнопка записи и статус */
-        btn_book_default: "Записаться",
-        from_prefix: "от ",
-        currency: "сом",
-        btn_clear: "✕ Сбросить",
-        status_open_text: "Открыто · до 23:00",
-        status_closing_text: "Скоро закрываемся",
-        status_closed_text: "Закрыто · откроемся в 10:00",
-        wa_default: "Здравствуйте! Хочу записаться в Стильстан."
-      },
-      kg: {
-        page_title: "Стильстан | Бишкектеги барбершоп",
-        nav_prices: "Баалар",
-        nav_why: "Эмне үчүн биз",
-        nav_contacts: "Байланыш",
-        hero_slogan: "Стиль • Сапат • Ишеним",
-        hero_desc: "Бишкектеги премиалдуу барбершоп. Ар бир майда-чүйдөсүнө чейин тактыкты жана кынтыксыз көрүнүштү баалаган мырзалар үчүн кесипкөй кызмат.",
-        cta_whatsapp: "WhatsApp аркылуу жазылуу",
-
-        stat_rating: "2ГИСтеги баа",
-        stat_reviews: "2ГИСтеги пикир",
-        stat_hours: "Күн сайын",
-
-        badge_prices: "Баалар",
-        title_prices: "Прайс-баракча",
-        desc_prices: "Жашыруун төлөмдөрсүз так жана ачык баалар. Баардык кызматтар сом менен көрсөтүлгөн.",
-        hint_select_service: "👆 Жазылуудан мурун кызматты тандоо үчүн аны басыңыз",
-
-        cat_haircuts: "Чач кыркуу",
-        p_male: "Эркектердин чачын кыркуу",
-        p_child: "Балдар чачы (12 жашка чейин)",
-        p_machine: "Машинка менен кыркуу",
-        p_styling: "Чач жасалгалоо",
-
-        cat_beard: "Сакал",
-        p_modeling: "Сакалды моделдештирүү",
-        p_royal_shave: "Падышалык кыруу",
-        p_camo: "Сакал камуфляжы",
-
-        cat_additional: "Кошумча кызматтар",
-        p_mask: "Бетти тазалоо + Black Mask",
-        p_scrab: "Бетти тазалоо + Скраб",
-        p_wax: "Ысык мом",
-        p_toning: "Чачты тонирлөө",
-
-        badge_why: "Артыкчылыктар",
-        title_why: "Эмне үчүн «Стильстанды» тандашат?",
-        desc_why: "Бишкектин чок ортосунда ар бир конок үчүн жогорку деңгээлдеги тейлөө жана ыңгайлуулук.",
-        why_rate_title: "2ГИСтеги 5.0 жогорку баасы",
-        why_rate_desc: "Туруктуу кардарлардын 94 анык пикири биздин чеберлердин кесипкөйлүгүн жана сыйлуу мамилесин далилдейт.",
-        why_hours_title: "23:00гө чейин иштейбиз",
-        why_hours_desc: "Күн сайын дем алышсыз 10:00дөн 23:00гө чейин ачыкпыз. Жумуштан кийин да келип кетүү абдан ыңгайлуу.",
-        why_kids_title: "12 жашка чейинки балдарды кыркабыз",
-        why_kids_desc: "Тажрыйбалуу барберлер жаш мырзалардын тилин таап, тыкан жана модалуу чач жасалгасын жасап беришет.",
-        why_wifi_title: "Кардарлар үчүн Wi-Fi",
-        why_wifi_desc: "Салондо акысыз жана ылдам интернет: күтүү маалында же кызмат учурунда ар дайым байланышта болуңуз.",
-
-        badge_steps: "Оңой кадамдар",
-        title_steps: "Кантип жазылуу керек?",
-        desc_steps: "Сиз каалаган мыкты стилге жетүү үчүн үч жөнөкөй кадам.",
-        step1_title: "Кызматты тандаңыз",
-        step1_desc: "Жогорудагы прайстан керектүү кызматтарды басып, жалпы сумманы билип алыңыз.",
-        step2_title: "WhatsApp'ка жазыңыз",
-        step2_desc: "Калкып турган «Жазылуу» баскычын басыңыз — тандалган кызматтар билдирүүгө автоматтык түрдө кошулат.",
-        step3_title: "Бизге келиңиз",
-        step3_desc: "Сизди Урмат көч., 16 дарегинде күтөбүз. Биздин чеберлер сиздин образыңызды кынтыксыз кылып беришет.",
-
-        title_insta: "Биздин иштер",
-        desc_insta: "Жаңы стилдерди, сакал моделдештирүү процессин жана барбершоптун атмосферасын Instagram баракчабыздан көрүңүз.",
-        btn_insta: "Instagram'дан көрүү @stil.stan",
-
-        badge_contacts: "Дарек жана байланыш",
-        title_contacts: "Байланыш",
-        desc_contacts: "Сизди «Стильстан» барбершопунда көрүүгө ар дайым кубанычтабыз.",
-        c_addr_label: "Дареги",
-        c_addr_val: "Бишкек ш., Урмат көч., 16",
-        c_hours_label: "Иш убактысы",
-        c_hours_val: "Күн сайын: 10:00–23:00",
-        c_phone1_label: "Жазылуу жана WhatsApp",
-        c_phone2_label: "Кошумча телефон",
-        btn_2gis: "2ГИСтен ачуу",
-        btn_directions: "Маршрут түзүү",
-
-        final_title: "Образыңызды жаңылоого даярсызбы?",
-        final_desc: "Азыр эле WhatsApp аркылуу жазылыңыз. Ыңгайлуу убакытты тандап, стилиңизге жаңы дем бериңиз.",
-        footer_copy: "© Стильстан — Барбершоп. Бардык укуктар корголгон.",
-
-        /* Плавающая кнопка записи и статус */
-        btn_book_default: "Жазылуу",
-        from_prefix: "баштап ",
-        currency: "сом",
-        btn_clear: "✕ Тазалоо",
-        status_open_text: "Ачык · 23:00гө чейин",
-        status_closing_text: "Жакында жабылат",
-        status_closed_text: "Жабык · саат 10:00дө ачылат",
-        wa_default: "Саламатсызбы! Стильстанга жазылайын дегем."
-      }
+    const SITE_CONFIG = {
+      brandNameCyrillic: 'СТИЛЬСТАН',
+      brandNameLatin: 'STIL.STAN',
+      phoneDisplay: '+996 705 050 647',
+      phoneTel: 'tel:+996705050647',
+      whatsappNumber: '996705050647',
+      whatsappBaseUrl: 'https://wa.me/996705050647',
+      instagramHandle: '@stil.stan',
+      instagramUrl: 'https://www.instagram.com/stil.stan/',
+      addressFull: 'Бишкек, ул. Кочкор-Ата, 446, Кыргызстан',
+      addressShort: 'Бишкек, ул. Кочкор-Ата, 446',
+      mapQuery: 'ул. Кочкор-Ата, 446, Бишкек, Кыргызстан',
+      workingHours: '10:00–23:00',
+      openTimeMinutes: 10 * 60,
+      closeTimeMinutes: 23 * 60,
     };
 
-    let currentLang = 'ru';
-    const selectedServices = new Set();
+    const SERVICES_DATA = [
+      // СТРИЖКИ
+      { id: 'mens-haircut', categoryId: 'haircuts', name: 'Мужские стрижки', boardName: 'МУЖСКИЕ СТРИЖКИ', priceDisplay: '400 сом', boardPrice: '400с' },
+      { id: 'kids-haircut', categoryId: 'haircuts', name: 'Детские стрижки до 12 лет', boardName: 'ДЕТСКИЕ СТРИЖКИ до 12л.', priceDisplay: '300–400 сом', boardPrice: '300/400с' },
+      { id: 'clipper-cut', categoryId: 'haircuts', name: 'Под машинку', boardName: 'ПОД МАШИНКУ', priceDisplay: '150 сом', boardPrice: '150с' },
+      { id: 'hair-styling', categoryId: 'haircuts', name: 'Укладка', boardName: 'УКЛАДКА', priceDisplay: '150 сом', boardPrice: '150с' },
+      // БОРОДА
+      { id: 'beard-modeling', categoryId: 'beard', name: 'Моделирование бороды', boardName: 'МОДЕЛИРОВАНИЕ БОРОДЫ', priceDisplay: '300 сом', boardPrice: '300с' },
+      { id: 'royal-shave', categoryId: 'beard', name: 'Королевское бритьё бороды', boardName: 'КОРОЛЕВСКОЕ БРИТЬЁ БОРОДЫ', priceDisplay: '300 сом', boardPrice: '300с' },
+      { id: 'beard-camouflage', categoryId: 'beard', name: 'Камуфляж бороды', boardName: 'КАМУФЛЯЖ БОРОДЫ', priceDisplay: '300 сом', boardPrice: '300с' },
+      // ДОПОЛНИТЕЛЬНО
+      { id: 'face-clean-black-mask', categoryId: 'extra', name: 'Чистка лица + Black Mask', boardName: 'ЧИСТКА ЛИЦА + BLACK MASK', priceDisplay: '600 сом', boardPrice: '600с' },
+      { id: 'face-clean-scrub', categoryId: 'extra', name: 'Чистка лица + Scrub', boardName: 'ЧИСТКА ЛИЦА + SCRUB', priceDisplay: '300 сом', boardPrice: '300с' },
+      { id: 'hot-wax', categoryId: 'extra', name: 'Горячий воск', boardName: 'ГОРЯЧИЙ ВОСК', priceDisplay: '200 сом', boardPrice: '200с' },
+      { id: 'hair-toning', categoryId: 'extra', name: 'Тонирование волос', boardName: 'ТОНИРОВАНИЕ ВОЛОС', priceDisplay: '500 сом', boardPrice: '500с' },
+    ];
 
-    /* ==========================================================================
-       ФУНКЦИЯ 1: ВРЕМЯ БИШКЕКА (UTC+6) И ПЛАШКА СТАТУСА
-       ========================================================================== */
-    function getBishkekTime() {
+    function buildWhatsAppUrl({
+      serviceName = '',
+      servicePrice = '',
+      clientName = '',
+      desiredDate = '',
+      desiredTime = '',
+    } = {}) {
+      const lines = [
+        'Здравствуйте! Хочу записаться в барбершоп СТИЛЬСТАН (ул. Кочкор-Ата, 446).',
+        '',
+      ];
+      if (serviceName) lines.push(`Услуга: ${serviceName}`);
+      if (servicePrice) lines.push(`Стоимость: ${servicePrice}`);
+      if (clientName && clientName.trim()) lines.push(`Имя: ${clientName.trim()}`);
+      if (desiredDate && desiredDate.trim()) {
+        const p = desiredDate.trim().split('-');
+        lines.push(`Желаемая дата: ${p.length === 3 ? `${p[2]}.${p[1]}.${p[0]}` : desiredDate.trim()}`);
+      }
+      if (desiredTime && desiredTime.trim()) {
+        lines.push(`Желаемое время: ${desiredTime.trim()}`);
+      }
+      lines.push('', 'Подскажите, пожалуйста, свободное время.');
+      const rawText = lines.join('\n');
+      return {
+        url: `${SITE_CONFIG.whatsappBaseUrl}?text=${encodeURIComponent(rawText)}`,
+        rawText,
+      };
+    }
+
+    function getTodayDateString() {
       const now = new Date();
-      const utcMs = now.getTime() + (now.getTimezoneOffset() * 60000);
-      return new Date(utcMs + (6 * 3600000));
+      return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
     }
 
-    function updateStatusBadge() {
-      const bDate = getBishkekTime();
-      const hours = bDate.getHours();
-      const minutes = bDate.getMinutes();
-      const totalMinutes = hours * 60 + minutes;
+    function renderPriceBoard() {
+      const boardListEl = document.getElementById('services-board-list');
+      if (!boardListEl) return;
 
-      let statusClass = 'status-open';
-      let statusText = '';
+      const groups = [
+        { id: 'haircuts', title: 'СТРИЖКИ', icon: 'scissors' },
+        { id: 'beard', title: 'БОРОДА', icon: 'sparkles' },
+        { id: 'extra', title: 'ДОПОЛНИТЕЛЬНО', icon: 'shield-check' },
+      ];
 
-      if (totalMinutes >= 600 && totalMinutes < 1350) {
-        statusClass = 'status-open';
-        statusText = translations[currentLang].status_open_text;
-      } else if (totalMinutes >= 1350 && totalMinutes < 1380) {
-        statusClass = 'status-warning';
-        statusText = translations[currentLang].status_closing_text;
-      } else {
-        statusClass = 'status-closed';
-        statusText = translations[currentLang].status_closed_text;
-      }
+      boardListEl.innerHTML = groups
+        .map((grp, grpIndex) => {
+          const items = SERVICES_DATA.filter((s) => s.categoryId === grp.id);
+          const rowsHtml = items
+            .map((srv) => {
+              const directWa = buildWhatsAppUrl({
+                serviceName: srv.name,
+                servicePrice: srv.priceDisplay,
+              }).url;
 
-      const badges = document.querySelectorAll('.js-status-badge');
-      badges.forEach(badge => {
-        badge.className = `status-badge ${statusClass} js-status-badge`;
-        const textEl = badge.querySelector('.status-text');
-        if (textEl) textEl.textContent = statusText;
-      });
-    }
+              return `
+                <div class="group flex items-center justify-between gap-2 py-1 px-2 rounded-lg hover:bg-[#181818]/90 transition-colors">
+                  <button
+                    type="button"
+                    data-select-service="${srv.id}"
+                    class="flex items-baseline flex-1 min-w-0 pr-1 text-left focus:outline-none"
+                    title="Выбрать услугу: ${srv.name}"
+                  >
+                    <span class="text-[12px] sm:text-[15px] font-bold tracking-wide text-[#F5F5F5] group-hover:text-[#F0D58A] transition-colors truncate">
+                      ${srv.boardName}
+                    </span>
+                    <span class="flex-1 mx-1.5 sm:mx-2.5 h-3 price-dots opacity-65 min-w-[14px]" aria-hidden="true"></span>
+                    <span class="text-sm sm:text-lg font-extrabold text-[#F0D58A] whitespace-nowrap shrink-0">
+                      ${srv.boardPrice}
+                    </span>
+                  </button>
 
-    /* ==========================================================================
-       ФУНКЦИЯ 2: ВЫБОР УСЛУГ И ПЛАВАЮЩАЯ КНОПКА WHATSAPP
-       ========================================================================== */
-    function initServiceSelection() {
-      const items = document.querySelectorAll('.js-price-item');
-      items.forEach(item => {
-        const toggle = () => {
-          const serviceId = item.getAttribute('data-id');
-          if (selectedServices.has(serviceId)) {
-            selectedServices.delete(serviceId);
-            item.classList.remove('selected');
-          } else {
-            selectedServices.add(serviceId);
-            item.classList.add('selected');
-          }
-          updateCalculationAndWhatsApp();
-        };
+                  <a
+                    href="${directWa}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center px-2.5 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-[#D6B15E]/15 text-[#F0D58A] hover:bg-[#D6B15E] hover:text-[#080808] border border-[#D6B15E]/40 transition-all shrink-0"
+                  >
+                    Записаться
+                  </a>
+                </div>
+              `;
+            })
+            .join('');
 
-        item.addEventListener('click', toggle);
-        item.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            toggle();
+          const dividerHtml =
+            grpIndex < groups.length - 1
+              ? `
+                <div class="flex items-center justify-center gap-2.5 mt-2.5 pt-0.5">
+                  <span class="h-[1px] flex-1 bg-[#D6B15E]/35"></span>
+                  <span class="w-1.5 h-1.5 rotate-45 bg-[#D6B15E]"></span>
+                  <span class="h-[1px] flex-1 bg-[#D6B15E]/35"></span>
+                </div>
+              `
+              : '';
+
+          return `
+            <div>
+              <div class="flex items-center gap-2 mb-1.5 px-2">
+                <i data-lucide="${grp.icon}" class="w-4 h-4 text-[#D6B15E] shrink-0"></i>
+                <span class="text-[#D6B15E] font-light">|</span>
+                <h2 class="text-xs sm:text-base font-extrabold tracking-[0.14em] text-[#F5F5F5] uppercase">
+                  ${grp.title}
+                </h2>
+              </div>
+              <div class="space-y-0.5">${rowsHtml}</div>
+              ${dividerHtml}
+            </div>
+          `;
+        })
+        .join('');
+
+      document.querySelectorAll('[data-select-service]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const serviceId = btn.getAttribute('data-select-service');
+          const selectEl = document.getElementById('booking-service');
+          if (selectEl && serviceId) {
+            selectEl.value = serviceId;
+            updateBookingBadge();
+            document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
         });
       });
+
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
     }
 
-    function clearServiceSelection() {
-      selectedServices.clear();
-      document.querySelectorAll('.js-price-item').forEach(item => {
-        item.classList.remove('selected');
+    function populateBookingSelect() {
+      const selectEl = document.getElementById('booking-service');
+      if (!selectEl) return;
+
+      const categories = [
+        { id: 'haircuts', label: 'Стрижки' },
+        { id: 'beard', label: 'Борода' },
+        { id: 'extra', label: 'Дополнительные услуги' },
+      ];
+
+      selectEl.innerHTML = categories
+        .map((cat) => {
+          const options = SERVICES_DATA.filter((s) => s.categoryId === cat.id)
+            .map((s) => `<option value="${s.id}">${s.name} — ${s.priceDisplay}</option>`)
+            .join('');
+          return `<optgroup label="${cat.label}">${options}</optgroup>`;
+        })
+        .join('');
+    }
+
+    function updateBookingBadge() {
+      const selectEl = document.getElementById('booking-service');
+      const badgeEl = document.getElementById('preview-price-badge');
+      const selected = SERVICES_DATA.find((s) => s.id === (selectEl ? selectEl.value : '')) || SERVICES_DATA[0];
+      if (badgeEl) {
+        badgeEl.textContent = `${selected.name} — ${selected.priceDisplay}`;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderPriceBoard();
+      populateBookingSelect();
+      updateBookingBadge();
+
+      const yr = document.getElementById('current-year');
+      if (yr) yr.textContent = new Date().getFullYear();
+
+      const dateInput = document.getElementById('booking-date');
+      if (dateInput) dateInput.setAttribute('min', getTodayDateString());
+
+      const selectEl = document.getElementById('booking-service');
+      if (selectEl) selectEl.addEventListener('change', updateBookingBadge);
+
+      const defaultWa = buildWhatsAppUrl({
+        serviceName: SERVICES_DATA[0].name,
+        servicePrice: SERVICES_DATA[0].priceDisplay,
+      }).url;
+      document.querySelectorAll('[data-whatsapp-quick]').forEach((el) => {
+        el.setAttribute('href', defaultWa);
       });
-      updateCalculationAndWhatsApp();
-    }
 
-    function updateCalculationAndWhatsApp() {
-      const t = translations[currentLang];
-      const floatingTextEl = document.getElementById('floating-wa-text');
-      const btnClearInline = document.getElementById('btn-clear-inline');
-      const count = selectedServices.size;
+      const bookingForm = document.getElementById('booking-form');
+      const errorMsg = document.getElementById('booking-error-msg');
 
-      if (count === 0) {
-        // Ничего не выбрано: плавающая кнопка показывает "Записаться" (или "Жазылуу")
-        if (floatingTextEl) {
-          floatingTextEl.textContent = t.btn_book_default;
-        }
-        if (btnClearInline) {
-          btnClearInline.classList.remove('visible');
-        }
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const selected = SERVICES_DATA.find((s) => s.id === (selectEl ? selectEl.value : '')) || SERVICES_DATA[0];
+          const nameVal = document.getElementById('booking-name')?.value || '';
+          const dateVal = document.getElementById('booking-date')?.value || '';
+          const timeVal = document.getElementById('booking-time')?.value || '';
 
-        const defaultMsg = t.wa_default;
-        const defaultUrl = `https://wa.me/996705050647?text=${encodeURIComponent(defaultMsg)}`;
-        document.querySelectorAll('.js-wa-link').forEach(link => {
-          link.href = defaultUrl;
+          if (dateVal && dateVal < getTodayDateString()) {
+            if (errorMsg) {
+              errorMsg.textContent = 'Нельзя выбрать прошедшую дату.';
+              errorMsg.classList.remove('hidden');
+            }
+            return;
+          }
+          if (timeVal) {
+            const [hh, mm] = timeVal.split(':').map(Number);
+            const total = hh * 60 + mm;
+            if (total < SITE_CONFIG.openTimeMinutes || total > SITE_CONFIG.closeTimeMinutes) {
+              if (errorMsg) {
+                errorMsg.textContent = 'Барбершоп работает с 10:00 до 23:00.';
+                errorMsg.classList.remove('hidden');
+              }
+              return;
+            }
+          }
+          if (errorMsg) errorMsg.classList.add('hidden');
+
+          const { url } = buildWhatsAppUrl({
+            serviceName: selected.name,
+            servicePrice: selected.priceDisplay,
+            clientName: nameVal,
+            desiredDate: dateVal,
+            desiredTime: timeVal,
+          });
+          window.open(url, '_blank', 'noopener,noreferrer');
         });
-        return;
       }
 
-      // Выбраны услуги: показываем кнопку очистки в прайсе
-      if (btnClearInline) {
-        btnClearInline.classList.add('visible');
+      if (window.lucide) {
+        window.lucide.createIcons();
       }
-
-      let totalPrice = 0;
-      let hasRange = false;
-      const selectedNames = [];
-
-      selectedServices.forEach(id => {
-        const el = document.querySelector(`.js-price-item[data-id="${id}"]`);
-        if (el) {
-          const price = parseInt(el.getAttribute('data-price'), 10) || 0;
-          const isRange = el.getAttribute('data-is-range') === 'true';
-          totalPrice += price;
-          if (isRange) hasRange = true;
-
-          const nameKey = `p_${id}`;
-          const name = t[nameKey] || el.querySelector('.price-name').textContent.trim();
-          selectedNames.push(name);
-        }
-      });
-
-      // Обновляем текст на плавающей кнопке: «Записаться · X сом» (или «от X сом»)
-      const prefix = hasRange ? t.from_prefix : '';
-      if (floatingTextEl) {
-        floatingTextEl.textContent = `${t.btn_book_default} · ${prefix}${totalPrice} ${t.currency}`;
-      }
-
-      // Формируем сообщение для WhatsApp с перечислением услуг и примерной суммой
-      let waMessage = "";
-      if (currentLang === 'kg') {
-        const approxPrefix = hasRange ? "баштап " : "";
-        waMessage = `Саламатсызбы! Стильстанга жазылайын дегем: ${selectedNames.join(', ')}. Болжолдуу баасы: ${approxPrefix}${totalPrice} сом.`;
-      } else {
-        const approxPrefix = hasRange ? "от " : "";
-        waMessage = `Здравствуйте! Хочу записаться в Стильстан: ${selectedNames.join(', ')}. Примерная сумма: ${approxPrefix}${totalPrice} сом.`;
-      }
-
-      const generatedUrl = `https://wa.me/996705050647?text=${encodeURIComponent(waMessage)}`;
-      document.querySelectorAll('.js-wa-link').forEach(link => {
-        link.href = generatedUrl;
-      });
-    }
-
-    /* ==========================================================================
-       ФУНКЦИЯ 3: КАРТА И ОБРАБОТКА ОШИБКИ ЗАГРУЗКИ
-       ========================================================================== */
-    function hideMapOnError() {
-      const frameWrapper = document.getElementById('map-frame-wrapper');
-      if (frameWrapper) {
-        frameWrapper.style.display = 'none';
-      }
-    }
-
-    /* ==========================================================================
-       ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА (РУС / КЫР)
-       ========================================================================== */
-    function setLanguage(lang) {
-      if (!translations[lang]) return;
-      currentLang = lang;
-      document.documentElement.lang = lang;
-      document.title = translations[lang].page_title;
-
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang][key] !== undefined) {
-          el.textContent = translations[lang][key];
-        }
-      });
-
-      updateStatusBadge();
-      updateCalculationAndWhatsApp();
-
-      const btnRu = document.getElementById('btn-ru');
-      const btnKg = document.getElementById('btn-kg');
-      if (btnRu && btnKg) {
-        if (lang === 'kg') {
-          btnKg.classList.add('active');
-          btnRu.classList.remove('active');
-        } else {
-          btnRu.classList.add('active');
-          btnKg.classList.remove('active');
-        }
-      }
-
-      try {
-        localStorage.setItem('stilstan_lang', lang);
-      } catch (e) {}
-    }
-
-    /* ==========================================================================
-       ИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ
-       ========================================================================== */
-    document.addEventListener('DOMContentLoaded', () => {
-      initServiceSelection();
-
-      let savedLang = 'ru';
-      try {
-        savedLang = localStorage.getItem('stilstan_lang') || 'ru';
-      } catch (e) {
-        savedLang = 'ru';
-      }
-      setLanguage(savedLang);
-
-      setInterval(updateStatusBadge, 60000);
     });
   </script>
 </body>
